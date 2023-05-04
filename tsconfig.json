@@ -19,6 +19,16 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
+    /* Path Aliases */
+    "baseUrl": "src",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@domain/*": ["domain/*"],
+      "@infrastructure/*": ["infrastructure/*"],
+      "@pages/*": ["pages/*"],
+    },
+
     /* Type Checking */
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
