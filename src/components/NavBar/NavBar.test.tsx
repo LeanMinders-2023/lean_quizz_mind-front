@@ -13,7 +13,7 @@ describe("NavBar", () => {
     it("has a hamburger menu", () => {
         render(<NavBar />)
 
-        const hamburgerIcon = screen.getByRole("graphics-document")
+        const hamburgerIcon = screen.getByRole("graphics-document", { hidden: true })
 
         expect(hamburgerIcon).toBeInTheDocument()
     })
