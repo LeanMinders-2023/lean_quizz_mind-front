@@ -1,6 +1,6 @@
-import { render } from "@testing-library/react";
-import { expect } from "vitest";
+import { render, screen } from "@testing-library/react";
 import { NavBar } from "./NavBar";
+import {expect} from "vitest";
 
 describe("NavBar", () => {
     it("renders correctly", () => {
@@ -8,5 +8,13 @@ describe("NavBar", () => {
 
         expect(container).toBeInTheDocument()
         expect(container).not.toBeEmptyDOMElement()
+    })
+
+    it("has a hamburger menu", () => {
+        render(<NavBar />)
+
+        const hamburgerIcon = screen.getByRole("graphics-document")
+
+        expect(hamburgerIcon).toBeInTheDocument()
     })
 })
