@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import {expect} from "vitest";
 
-const NavBar = () => null;
+const NavBar = () => <nav></nav>;
 
 describe("NavBar", () => {
     it("renders correctly", () => {
