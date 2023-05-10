@@ -1,9 +1,8 @@
-import { Example } from '@components/Example';
+import {Home} from "@pages/Home/Home";
 
 const App = () => (
     <>
-        <h1 className="text-center text-xl font-bold hover:text-red-400 lg:text-4xl">Lean Quizz Mind</h1>
-        <Example />
+        <Home />
     </>
 );
 
