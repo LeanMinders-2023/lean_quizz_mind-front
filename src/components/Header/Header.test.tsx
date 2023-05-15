@@ -1,4 +1,4 @@
-import {render} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import {Header} from "@components/Header/Header.tsx";
 
 describe("Header", () => {
@@ -8,6 +8,14 @@ describe("Header", () => {
         expect(container).toBeInTheDocument()
         expect(container).not.toBeEmptyDOMElement()
     })
+
+    it('contains navbar component', function () {
+        render(<Header />)
+
+        const navbar = screen.getByRole("navigation")
+
+        expect(navbar).toBeInTheDocument()
+    });
 })
 
 
