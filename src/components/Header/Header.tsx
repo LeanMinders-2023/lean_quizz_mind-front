@@ -2,7 +2,7 @@ import {NavBar} from "@components/NavBar/NavBar.tsx";
 import {ReactNode} from "react";
 
 interface ChildrenProps {
-    children: ReactNode
+    children?: ReactNode
 }
 
 export const Header = ({children} : ChildrenProps) => (
