@@ -10,11 +10,20 @@ describe("Searcher", () => {
         expect(container).not.toBeEmptyDOMElement()
     });
 
-    it("contains input element", () => {
+    it("contains input element by role", () => {
         render(<Searcher />)
 
         const input = screen.getByRole("textbox")
 
         expect(input).toBeInTheDocument()
     })
+
+    it('contains input element with placeholder', function () {
+        render(<Searcher />)
+
+        const input = screen.getAllByPlaceholderText("Search")
+
+        expect(input).toBeInTheDocument()
+    });
+
 })
