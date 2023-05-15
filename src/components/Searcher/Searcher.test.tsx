@@ -1,6 +1,5 @@
 import {render, screen} from "@testing-library/react";
 import {Searcher} from "@components/Searcher/Searcher.tsx";
-import {expect} from "vitest";
 
 describe("Searcher", () => {
     it("renders correctly", () => {
@@ -18,12 +17,21 @@ describe("Searcher", () => {
         expect(input).toBeInTheDocument()
     })
 
-    it('contains input element with placeholder', function () {
+    it("contains input element with placeholder", () => {
         render(<Searcher />)
 
         const input = screen.getByPlaceholderText("Search")
 
         expect(input).toBeInTheDocument()
     });
+
+    it("contains input with search icon", () => {
+        render(<Searcher />)
+
+        const searcherIcon = screen.getByRole("graphics-document", { hidden: true })
+
+        expect(searcherIcon).toBeInTheDocument()
+    });
+
 
 })
