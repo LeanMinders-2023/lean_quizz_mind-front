@@ -1,5 +1,6 @@
-import {render} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import {Searcher} from "@components/Searcher/Searcher.tsx";
+import {expect} from "vitest";
 
 describe("Searcher", () => {
     it("renders correctly", () => {
@@ -8,4 +9,12 @@ describe("Searcher", () => {
         expect(container).toBeInTheDocument()
         expect(container).not.toBeEmptyDOMElement()
     });
+
+    it("contains input element", () => {
+        render(<Searcher />)
+
+        const input = screen.getByRole("input")
+
+        expect(input).toBeInTheDocument()
+    })
 })
