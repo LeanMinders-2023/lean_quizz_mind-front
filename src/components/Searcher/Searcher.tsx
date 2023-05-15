@@ -1,4 +1,6 @@
 
 export const Searcher = () => (
-    <div></div>
+    <div>
+        <input type="text"/>
+    </div>
 );

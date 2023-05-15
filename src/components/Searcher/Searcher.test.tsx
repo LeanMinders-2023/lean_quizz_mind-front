@@ -13,7 +13,7 @@ describe("Searcher", () => {
     it("contains input element", () => {
         render(<Searcher />)
 
-        const input = screen.getByRole("input")
+        const input = screen.getByRole("textbox")
 
         expect(input).toBeInTheDocument()
     })
