@@ -2,6 +2,6 @@ import { HiMenuAlt3 } from "react-icons/hi"
 
 export const NavBar = () => (
     <nav>
-        <HiMenuAlt3 role="graphics-document" className="fill-white text-2xl"/>
+        <HiMenuAlt3 role="graphics-document" className="fill-white text-2xl lg:hidden"/>
     </nav>
 );
