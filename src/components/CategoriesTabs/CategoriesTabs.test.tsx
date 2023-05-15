@@ -1,4 +1,5 @@
 import {render} from "@testing-library/react";
+import CategoriesTabs from "@components/CategoriesTabs/CategoriesTabs";
 
 describe("CategoriesTabs", () => {
     it("renders correctly", () => {
