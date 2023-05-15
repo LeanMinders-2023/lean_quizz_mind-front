@@ -16,6 +16,14 @@ describe("Header", () => {
 
         expect(navbar).toBeInTheDocument()
     });
+
+    it("contains searcher component", function () {
+        render(<Header />)
+
+        const searcher = screen.getByRole("textbox")
+
+        expect(searcher).toBeInTheDocument()
+    });
 })
 
 
