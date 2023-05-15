@@ -21,7 +21,7 @@ describe("Searcher", () => {
     it('contains input element with placeholder', function () {
         render(<Searcher />)
 
-        const input = screen.getAllByPlaceholderText("Search")
+        const input = screen.getByPlaceholderText("Search")
 
         expect(input).toBeInTheDocument()
     });

@@ -1,6 +1,6 @@
 
 export const Searcher = () => (
     <div>
-        <input type="text"/>
+        <input type="text" placeholder="Search"/>
     </div>
 );
