@@ -1,6 +1,10 @@
 import {useState} from 'react'
 import {Tab} from '@headlessui/react'
-import {Categories, classNames} from "@components/Categories/Categories";
+import {Categories} from "@components/Categories/Categories";
+
+export function classNames(...classes: string[]) {
+    return classes.filter(Boolean).join(' ')
+}
 
 export default function CategoriesTabs() {
     const [categories] = useState({
@@ -57,7 +61,7 @@ export default function CategoriesTabs() {
     return (
         <div className="w-full max-w-md px-2 py-16 sm:px-0">
             <Tab.Group>
-                <Categories categories={categories}/>
+                <Categories categories={categories} classNames={classNames} />
                 <Tab.Panels className="mt-2">
                     {Object.values(categories).map((posts, idx) => (
                         <Tab.Panel

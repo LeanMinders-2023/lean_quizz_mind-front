@@ -1,10 +1,11 @@
 import {Tab} from "@headlessui/react";
 
-export function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
+interface CategoriesProps {
+    categories: any;
+    classNames(...classes: string[]): string;
 }
 
-export const Categories = ({categories}: any) => (
+export const Categories = ({categories, classNames}: CategoriesProps) => (
     <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
         {Object.keys(categories).map((category) => (
             <Tab
