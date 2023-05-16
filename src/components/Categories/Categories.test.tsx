@@ -7,7 +7,7 @@ describe("Categories", () => {
     it("renders correctly", () => {
         const {container} = render(
             <Tab.Group>
-                <Categories categories={{}} classNames={() => ""}/>
+                <Categories categories={[]} classNames={() => ""}/>
             </Tab.Group>
         )
 

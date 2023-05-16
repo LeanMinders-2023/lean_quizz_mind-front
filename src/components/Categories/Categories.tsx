@@ -1,15 +1,16 @@
 import {Tab} from "@headlessui/react";
+import {Category} from "@domain/category/category.model";
 
 interface CategoriesProps {
-    categories: any;
+    categories: Category[];
     classNames(...classes: string[]): string;
 }
 
 export const Categories = ({categories, classNames}: CategoriesProps) => (
     <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-        {Object.keys(categories).map((category) => (
+        {categories.map((category) => (
             <Tab
-                key={category}
+                key={category.id}
                 className={({selected}) =>
                     classNames(
                         'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
@@ -20,7 +21,7 @@ export const Categories = ({categories, classNames}: CategoriesProps) => (
                     )
                 }
             >
-                {category}
+                {category.name}
             </Tab>
         ))}
     </Tab.List>
