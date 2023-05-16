@@ -8,7 +8,7 @@ export function classNames(...classes: string[]) {
 
 export default function CategoriesTabs() {
     const [categories] = useState({
-        Javié: [
+        New: [
             {
                 id: 1,
                 title: 'Does drinking coffee make you smarter?',
