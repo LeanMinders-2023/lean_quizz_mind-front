@@ -9,7 +9,7 @@ interface Quizz {
     questions: Question[];
 }
 
-type QuizzDTO = Pick<Quizz, "name" | "image" | "difficulty" | "questions">
+type QuizzDTO = Pick<Quizz, "id" | "name" | "image" | "difficulty" | "questions">
 
 export type {
     Quizz,
