@@ -5,10 +5,15 @@ interface QuizzItemProps {
 }
 
 export const QuizzItem = ({ quizzDTO }: QuizzItemProps) => {
-    const { image, name } = quizzDTO
+    const { image, name, difficulty, questions} = quizzDTO
     return (
         <article>
             <img src={image} alt={name} aria-label={name}/>
+            <div role="row" aria-label={`${name}-info`}>
+                <h3 role="cell">{name}</h3>
+                <p role="cell">Difficulty: {difficulty}</p>
+                <p role="cell">Questions: {questions.length}</p>
+            </div>
         </article>
     )
 };
