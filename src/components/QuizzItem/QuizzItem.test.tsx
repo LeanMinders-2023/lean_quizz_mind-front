@@ -1,4 +1,4 @@
-import {render, screen} from "@testing-library/react";
+import {render, screen, within} from "@testing-library/react";
 import {QuizzItem} from "@components/QuizzItem/QuizzItem.tsx";
 import {beforeEach, expect} from "vitest";
 import {QuizzDTO} from "@domain/quizz/quizz.model.ts";
@@ -39,5 +39,14 @@ describe("QuizzItem", () => {
 
         expect(information).toBeInTheDocument()
         expect(allInformationCell.length).toBe(totalInformationsCells)
+    })
+
+    it("checks that cells are within row", () => {
+        render(<QuizzItem quizzDTO={quizz}/>)
+
+        const information = screen.getByRole("row", { name: `${quizz.name}-info`})
+        const allInformationCell = within(information).getAllByRole("cell")
+
+        expect(allInformationCell.length).not.toBe(0)
     })
 })
