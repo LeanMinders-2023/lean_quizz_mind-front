@@ -8,6 +8,7 @@ describe("QuizzItem", () => {
 
     beforeEach(() => {
         quizz = {
+            id: "1",
             name: "irrelevant",
             image: "irrelevantImg",
             difficulty: "irrelevant",
@@ -31,7 +32,7 @@ describe("QuizzItem", () => {
     })
 
     it("renders the information", () => {
-        const totalInformationsCells = Object.entries(quizz).length - 1
+        const totalInformationsCells = Object.entries(quizz).length - 2
         render(<QuizzItem quizzDTO={quizz}/>)
 
         const information = screen.getByRole("row", { name: `${quizz.name}-info`})
