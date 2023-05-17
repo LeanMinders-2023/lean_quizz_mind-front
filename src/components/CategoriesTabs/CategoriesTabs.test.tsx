@@ -9,6 +9,13 @@ describe("CategoriesTabs", () => {
         expect(container).not.toBeEmptyDOMElement()
     })
 
+    it("does not contains quizzes", () => {
+        const {container} = render(<CategoriesTabs/>)
+        const quizzList = within(container).getByText("This category has not quizzes")
+
+        expect(quizzList).toBeInTheDocument()
+    })
+
     it("contains a quizz list", () => {
         const {container} = render(<CategoriesTabs/>)
         const quizzList = within(container).getByRole("list")
