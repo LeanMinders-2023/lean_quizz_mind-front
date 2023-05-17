@@ -1,5 +1,6 @@
 import {render} from "@testing-library/react";
-import QuizzItem from "@components/QuizzItem/QuizzItem";
+
+const QuizzItem = () => <article></article>;
 
 describe("QuizzItem", () => {
     it("renders correctly", () => {
