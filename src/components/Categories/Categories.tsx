@@ -1,5 +1,5 @@
 import {Tab} from "@headlessui/react";
-import {Category} from "@domain/category/category.model";
+import type {Category} from "@domain/category/category.model";
 
 interface CategoriesProps {
     categories: Category[];
