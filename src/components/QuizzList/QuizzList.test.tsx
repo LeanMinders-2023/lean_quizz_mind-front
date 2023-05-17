@@ -1,6 +1,5 @@
 import {render} from "@testing-library/react";
-
-const QuizzList = () => <ul></ul>;
+import {QuizzList} from "@components/QuizzList/QuizzList";
 
 describe("QuizzList", () => {
     it("renders correctly", () => {
