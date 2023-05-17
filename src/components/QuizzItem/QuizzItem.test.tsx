@@ -38,7 +38,7 @@ describe("QuizzItem", () => {
         const allInformationCell = screen.getAllByRole("cell")
 
         expect(information).toBeInTheDocument()
-        expect(allInformationCell.length).toBe(totalInformationsCells)
+        expect(allInformationCell).toHaveLength(totalInformationsCells)
     })
 
     it("checks that cells are within row", () => {
@@ -47,6 +47,6 @@ describe("QuizzItem", () => {
         const information = screen.getByRole("row", { name: `${quizz.name}-info`})
         const allInformationCell = within(information).getAllByRole("cell")
 
-        expect(allInformationCell.length).not.toBe(0)
+        expect(allInformationCell).not.toHaveLength(0)
     })
 })
