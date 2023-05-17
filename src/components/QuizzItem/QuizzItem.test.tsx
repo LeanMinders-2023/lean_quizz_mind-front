@@ -29,4 +29,15 @@ describe("QuizzItem", () => {
 
         expect(cover).toBeInTheDocument()
     })
+
+    it("renders the information", () => {
+        const totalInformationsCells = Object.entries(quizz).length - 1
+        render(<QuizzItem quizzDTO={quizz}/>)
+
+        const information = screen.getByRole("row", { name: `${quizz.name}-info`})
+        const allInformationCell = screen.getAllByRole("cell")
+
+        expect(information).toBeInTheDocument()
+        expect(allInformationCell.length).toBe(totalInformationsCells)
+    })
 })
