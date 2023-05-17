@@ -12,7 +12,7 @@ interface CategoriesTabsProps {
 }
 
 export const CategoriesTabs = ({categories}: CategoriesTabsProps) => (
-    <div className="w-full max-w-md px-2 py-16 sm:px-0">
+    <div className="w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] px-2 py-16 sm:px-0 flex flex-col items-center">
         <Tab.Group>
             <Categories categories={categories} classNames={classNames}/>
             <Tab.Panels className="mt-2">

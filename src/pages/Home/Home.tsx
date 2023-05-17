@@ -7,18 +7,18 @@ export const Home = () => {
     const [categories] = useState<Category[]>([
         {id: "1", name: "Frontend", quizzes: [{
             id: "1",
-            name: "irrelevant",
+            name: "Frontend quizzes",
             description: "irrelevant",
             image: "https://www.servnet.mx/hubfs/Backend-y-Frontend-¿Qué-es-cómo-funcionan-en-la-programación.jpg",
-            difficulty: "irrelevant",
+            difficulty: "Easy",
             questions: []
         }]},
         {id: "2", name: "Backend", quizzes: [{
             id: "1",
-            name: "irrelevant",
+            name: "Backend quizzes",
             description: "irrelevant",
-            image: "https://www.servnet.mx/hubfs/Backend-y-Frontend-¿Qué-es-cómo-funcionan-en-la-programación.jpg",
-            difficulty: "irrelevant",
+            image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg",
+            difficulty: "Hard",
             questions: []
         }]},
         {id: "3", name: "Fullstack"}
@@ -29,7 +29,9 @@ export const Home = () => {
         <Header>
             <h1 className="mt-2 text-white text-center text-xl">Let's test your knowledge</h1>
         </Header>
-        <CategoriesTabs categories={categories}/>
+        <main className="w-full flex justify-center">
+            <CategoriesTabs categories={categories}/>
+        </main>
         </>
     )
 };
