@@ -4,7 +4,7 @@ import {QuizzDTO} from "@domain/quizz/quizz.model";
 
 describe("QuizzList", () => {
     it("renders correctly", () => {
-        const {container} = render(<QuizzList />)
+        const {container} = render(<QuizzList quizzes={[]}/>)
 
         expect(container).toBeInTheDocument()
         expect(container).not.toBeEmptyDOMElement()
@@ -12,6 +12,7 @@ describe("QuizzList", () => {
 
     it("renders any items", () => {
         const quizzes: QuizzDTO[] = [{
+            id: "1",
             name: "irrelevant",
             image: "irrelevantImg",
             difficulty: "irrelevant",
