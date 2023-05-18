@@ -8,4 +8,8 @@ export class Http {
 
         return new Http(url)
     }
+
+    public get<T>(endPoint?: string): Promise<T> {
+
+    }
 }
