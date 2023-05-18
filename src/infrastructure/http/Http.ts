@@ -2,10 +2,10 @@ export class Http {
     private constructor(private url: string) {}
 
     public static createInstance(url: string) {
-        if(url !== "") {
-            return new Http(url)
+        if (url === "") {
+            throw new Error("The url can not be empty")
         }
 
-        throw new Error("The url can not be empty")
+        return new Http(url)
     }
 }
