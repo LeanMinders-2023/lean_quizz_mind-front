@@ -3,7 +3,7 @@ import {expect} from "vitest";
 
 describe("Http", () => {
     it("should be defined if the url is not empty", () => {
-        const http = Http.createInstance("url");
+        const http = Http.createInstance("http://localhost:8080");
 
         expect(http).toBeDefined();
     });
@@ -13,7 +13,7 @@ describe("Http", () => {
     })
 
     it("should have a get method", () => {
-        const http = Http.createInstance("url");
+        const http = Http.createInstance("http://localhost:8080");
 
         expect(http.get).toBeDefined();
     });
