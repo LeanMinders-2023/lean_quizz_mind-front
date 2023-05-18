@@ -17,4 +17,10 @@ describe("Http", () => {
 
         expect(http.get).toBeDefined();
     });
+
+    it("should return a promise", () => {
+        const http = Http.createInstance("url");
+
+        expect(http.get()).toBeInstanceOf(Promise)
+    })
 });
