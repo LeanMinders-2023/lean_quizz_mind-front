@@ -2,6 +2,7 @@ import {Header} from "@components/Header/Header.tsx";
 import {CategoriesTabs} from "@components/CategoriesTabs/CategoriesTabs";
 import {useState} from "react";
 import {Category} from "@domain/category/category.model";
+import {QuizzItem} from "@components/QuizzItem/QuizzItem";
 
 export const Home = () => {
     const [categories] = useState<Category[]>([
@@ -31,6 +32,15 @@ export const Home = () => {
         </Header>
         <main className="w-full flex justify-center">
             <CategoriesTabs categories={categories}/>
+            <section aria-label="random">
+                <QuizzItem quizzDTO={{
+                    id: "1",
+                    name: "irrelevant",
+                    image: "irrelevantImg",
+                    difficulty: "irrelevant",
+                    questions: []
+                }} />
+            </section>
         </main>
         </>
     )
