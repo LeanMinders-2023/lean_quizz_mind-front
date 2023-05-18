@@ -11,4 +11,10 @@ describe("Http", () => {
     it("throws an error if the url is empty", () => {
         expect(() => Http.createInstance("")).toThrow("The url can not be empty")
     })
+
+    it("should have a get method", () => {
+        const http = Http.createInstance("url");
+
+        expect(http.get).toBeDefined();
+    });
 });
