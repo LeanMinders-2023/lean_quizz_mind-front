@@ -1,4 +1,4 @@
-import {render, screen} from "@testing-library/react";
+import {render, screen, within} from "@testing-library/react";
 import { Home } from "./Home";
 import {expect} from "vitest";
 
@@ -16,5 +16,14 @@ describe("Home", () => {
         const navBar = screen.getByRole("navigation")
 
         expect(navBar).toBeInTheDocument()
+    })
+
+    it("contains a challenge", () => {
+        render(<Home />)
+
+        const challenge = screen.getByRole("section", { name: "random"})
+        const quizzItem = within(challenge).getByRole("article")
+
+        expect(quizzItem).toBeInTheDocument()
     })
 })
