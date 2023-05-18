@@ -5,5 +5,7 @@ export class Http {
         if(url !== "") {
             return new Http(url)
         }
+
+        throw new Error("The url can not be empty")
     }
 }
