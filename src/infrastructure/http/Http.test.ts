@@ -19,7 +19,7 @@ describe("Http", () => {
     });
 
     it("should return a promise", () => {
-        const http = Http.createInstance("url");
+        const http = Http.createInstance("https://jsonplaceholder.typicode.com/todos");
 
         expect(http.get()).toBeInstanceOf(Promise)
     })
