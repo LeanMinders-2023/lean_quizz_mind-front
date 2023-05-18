@@ -6,4 +6,10 @@ describe("Http", () => {
 
         expect(http).toBeDefined();
     });
+
+    it("should have a get method", () => {
+        const http = new Http();
+
+        expect(http.get).toBeDefined();
+    });
 });
