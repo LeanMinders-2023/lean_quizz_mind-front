@@ -1,4 +1,5 @@
 import {Http} from "@infrastructure/http/Http.ts";
+import {expect} from "vitest";
 
 describe("Http", () => {
     it("should be defined if the url is not empty", () => {
@@ -6,4 +7,8 @@ describe("Http", () => {
 
         expect(http).toBeDefined();
     });
+
+    it("throws an error if the url is empty", () => {
+        expect(() => Http.createInstance("")).toThrow("The url can not be empty")
+    })
 });
