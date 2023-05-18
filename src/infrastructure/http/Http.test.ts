@@ -1,5 +1,4 @@
-class Http {
-}
+import {Http} from "@infrastructure/http/Http.ts";
 
 describe("Http", () => {
     it("should be defined", () => {
