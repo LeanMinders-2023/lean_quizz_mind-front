@@ -10,6 +10,7 @@ export class Http {
     }
 
     public async get<T>(endPoint?: string): Promise<T> {
+        // endpoint??
         const anyOne = endPoint ? `/${endPoint}` : "";
         const res = await fetch(`${this.url}${anyOne}`)
         return res.json()
