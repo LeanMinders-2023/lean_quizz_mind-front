@@ -9,7 +9,7 @@ describe("Http", () => {
 
     it("throws an error if the url is empty", () => {
         expect(() => Http.createInstance("")).toThrow("The url can not be empty")
-    })
+    });
 
     it("should have a get method", () => {
         const http = Http.createInstance("http://localhost");
@@ -17,9 +17,15 @@ describe("Http", () => {
         expect(http.get).toBeDefined();
     });
 
-    it("should return a promise", () => {
+    it("get method should return a promise", () => {
         const http = Http.createInstance("https://jsonplaceholder.typicode.com/todos");
 
-        expect(http.get()).toBeInstanceOf(Promise)
-    })
+        expect(http.get()).toBeInstanceOf(Promise);
+    });
+
+    it("should have a post method", function () {
+        const http = Http.createInstance("http://localhost");
+
+        expect(http.post).toBeDefined();
+    });
 });
