@@ -1,5 +1,4 @@
 import {Http} from "@infrastructure/http/Http.ts";
-import {expect} from "vitest";
 
 describe("Http", () => {
     it("should be defined if the url is not empty", () => {
