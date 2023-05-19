@@ -16,7 +16,15 @@ export class Http {
         return res.json()
     }
 
-    public async post<T>(endPoint?: string, body: T): Promise<T> {
-
+    public async post<T>(body: T, endPoint?: string ): Promise<T> {
+        const anyOne = endPoint ? `/${endPoint}` : "";
+        const res = await fetch(`${this.url}${anyOne}`, {
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify(body)
+        })
+        return res.json()
     }
 }
