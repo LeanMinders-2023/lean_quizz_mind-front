@@ -28,4 +28,10 @@ describe("Http", () => {
 
         expect(http.post).toBeDefined();
     });
+
+    it("post method should return a promise", () => {
+        const http = Http.createInstance("https://jsonplaceholder.typicode.com/todos");
+
+        expect(http.get()).toBeInstanceOf(Promise);
+    });
 });
