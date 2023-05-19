@@ -15,4 +15,8 @@ export class Http {
         const res = await fetch(`${this.url}${anyOne}`)
         return res.json()
     }
+
+    public async post<T>(endPoint?: string, body: T): Promise<T> {
+
+    }
 }
