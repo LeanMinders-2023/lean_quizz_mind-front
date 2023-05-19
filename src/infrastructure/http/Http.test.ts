@@ -13,7 +13,7 @@ describe("Http", () => {
     })
 
     it("should have a get method", () => {
-        const http = Http.createInstance("http://localhost:8080");
+        const http = Http.createInstance("http://localhost");
 
         expect(http.get).toBeDefined();
     });
